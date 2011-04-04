@@ -34,7 +34,7 @@ $(document).ready(function () {
 		*/
 		}
 	
-	$( "#accordion" ).accordion({ collapsible: true, active: false });
+	$( "#accordion" ).accordion({ collapsible: true, active: false, autoHeight: true });
         $( ".date" ).datepicker({ dateFormat: 'yy-mm-dd' });
     $( ".time" ).timepicker({hourText: 'Stunde', amPmText: ['', '']});		
 	
