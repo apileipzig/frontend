@@ -34,8 +34,8 @@ $(document).ready(function () {
 		*/
 		}
 	
-	$( "#accordion" ).accordion({ collapsible: true, active: false });
-        $( ".date" ).datepicker({ dateFormat: 'yy-mm-dd' });
+	$( ".accordion" ).accordion({ collapsible: true, active: false });
+    $( ".date" ).datepicker({ dateFormat: 'yy-mm-dd' });
     $( ".time" ).timepicker({hourText: 'Stunde', amPmText: ['', '']});		
 	
   	// after a check if there exists a form on the actual page -> html5form and h5validate
