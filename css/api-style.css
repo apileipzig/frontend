@@ -649,7 +649,11 @@ a.select_all {
 
 }
 
-
+/* wiki overwrites
+-------------------------------------------------------------- */
+.edit_user {
+	margin-right: 10px;
+}
 
 
 /* Backend chrome
