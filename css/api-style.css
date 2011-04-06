@@ -690,6 +690,14 @@ ul#EditProfil li a {background-color: white; font-size: 0.9em; color: #666; text
 ul#EditProfil li a.smallfield {width: 90px;margin-bottom: 0;}
 ul#EditProfil li a:hover, ul#EditProfil li a:focus {color: #09F;}
 
+/* panel */
+.panel .accordion td {
+	text-align: center;
+}
+.panel .accordion td:first-child {
+	text-align: left;
+}
+
 
 /* sidebar
 -------------------------------------------------------------- */

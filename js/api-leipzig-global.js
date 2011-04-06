@@ -79,7 +79,13 @@ $(document).ready(function () {
   		})
 	});    */
 	
-    // Highlighting der Codebeispiele im WIKI
+	// check all function in panel
+	$('.panel input:checkbox.select-all').click(
+        function() {
+			var classes = $(this).attr('class').split(' ');
+            $(this).parents('table:eq(0)').find('input:checkbox[class=' + classes[1] +']').attr('checked', this.checked);
+        }
+    );
         
 });
 
