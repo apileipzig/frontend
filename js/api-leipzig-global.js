@@ -42,11 +42,13 @@ $(document).ready(function () {
   	// html5form: make incompatible browser ready for HTML5 forms and show replace-fields on all non-webkit-browsers
   	//http://www.matiasmancini.com.ar/ajax-jquery-validation-html5-form.html	
   	if ($("form").length){
+    	 /*
     	 $('.api-form').html5form({
             allBrowsers : true,
             colorOn :'#292929',
             colorOff :'#999'
         });
+        */
 	//validate the form and show additional infos on required input-fields
 	//http://ericleads.com/h5validate/
  	$('.api-form').h5Validate({
@@ -80,14 +82,28 @@ $(document).ready(function () {
 	});    */
 	
 	// check all function in panel
-	$('.panel input:checkbox.select-all').click(
+	$('.panel .parent').click(
         function() {
 			var classes = $(this).attr('class').split(' ');
-            $(this).parents('table:eq(0)').find('input:checkbox[class=' + classes[1] +']').attr('checked', this.checked);
+            $(this).parents('table:eq(0)').find('.child').filter('.' + classes[1]).attr('checked', this.checked);
         }
     );
-        
+    //clicking the last unchecked or checked checkbox should check or uncheck the parent checkbox
+    $('.panel .child').click(
+        function() {
+            var classes = $(this).attr('class').split(' ');
+            if ($(this).parents('table:eq(0)').find('.parent').filter('.' + classes[1]).attr('checked') == true && this.checked == false)
+                $(this).parents('table:eq(0)').find('.parent').filter('.' + classes[1]).attr('checked', false);
+            if (this.checked == true) {
+                var flag = true;
+                $(this).parents('table:eq(0)').find('.child').filter('.' + classes[1]).each(
+                    function() {
+                        if (this.checked == false)
+                            flag = false;
+                    }
+                );
+                $(this).parents('table:eq(0)').find('.parent').filter('.' + classes[1]).attr('checked', flag);
+            }
+        }
+    );        
 });
-
-
-
