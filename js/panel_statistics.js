@@ -17,6 +17,11 @@ $(document).ready(function() {
           text: 'Nutzung der verschiedenen Datentabellen'
         }
       },
+      plotOptions: {
+        series: {
+          pointWidth: 20
+        }
+      },
       legend: {
         backgroundColor: '#FFFFFF',
         reversed: true
@@ -25,11 +30,6 @@ $(document).ready(function() {
         formatter: function() {
           return ''+
           this.series.name +': '+ this.y +'';
-        }
-      },
-      plotOptions: {
-        series: {
-          stacking: 'normal'
         }
       },
       series: stats_data_series_array
