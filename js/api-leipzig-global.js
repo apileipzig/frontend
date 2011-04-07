@@ -80,30 +80,45 @@ $(document).ready(function () {
     		}
   		})
 	});    */
+
+	// check and set parent checkboxes after reload
+	$('.panel .parent').attr('checked', false).each(
+		function() {
+			var classes = $(this).attr('class').split(' ');
+			var flag = true;
+			$(this).parents('table:eq(0)').find('.child').filter('.' + classes[1]).each(
+				function() {
+					if (this.checked == false)
+					flag = false;
+				}
+			);
+			$(this).filter('.' + classes[1]).attr('checked', flag);
+		}
+	);
 	
 	// check all function in panel
 	$('.panel .parent').click(
-        function() {
+		function() {
 			var classes = $(this).attr('class').split(' ');
-            $(this).parents('table:eq(0)').find('.child').filter('.' + classes[1]).attr('checked', this.checked);
-        }
-    );
-    //clicking the last unchecked or checked checkbox should check or uncheck the parent checkbox
-    $('.panel .child').click(
-        function() {
-            var classes = $(this).attr('class').split(' ');
-            if ($(this).parents('table:eq(0)').find('.parent').filter('.' + classes[1]).attr('checked') == true && this.checked == false)
-                $(this).parents('table:eq(0)').find('.parent').filter('.' + classes[1]).attr('checked', false);
-            if (this.checked == true) {
-                var flag = true;
-                $(this).parents('table:eq(0)').find('.child').filter('.' + classes[1]).each(
-                    function() {
-                        if (this.checked == false)
-                            flag = false;
-                    }
-                );
-                $(this).parents('table:eq(0)').find('.parent').filter('.' + classes[1]).attr('checked', flag);
-            }
-        }
-    );        
+			$(this).parents('table:eq(0)').find('.child').filter('.' + classes[1]).attr('checked', this.checked);
+		}
+	);
+	//clicking the last unchecked or checked checkbox should check or uncheck the parent checkbox
+	$('.panel .child').click(
+		function() {
+			var classes = $(this).attr('class').split(' ');
+			if ($(this).parents('table:eq(0)').find('.parent').filter('.' + classes[1]).attr('checked') == true && this.checked == false)
+				$(this).parents('table:eq(0)').find('.parent').filter('.' + classes[1]).attr('checked', false);
+			if (this.checked == true) {
+				var flag = true;
+				$(this).parents('table:eq(0)').find('.child').filter('.' + classes[1]).each(
+					function() {
+						if (this.checked == false)
+						flag = false;
+					}
+				);
+				$(this).parents('table:eq(0)').find('.parent').filter('.' + classes[1]).attr('checked', flag);
+			}
+		}
+	);
 });
