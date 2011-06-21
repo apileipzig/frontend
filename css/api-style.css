@@ -738,6 +738,4 @@ border-radius: 5px; text-indent: 48px; line-height: 27px;}
 #addFooterLinks a.rss {background: #e7e7e7  url(../images/api-sprites-tall.png) 0 -40px no-repeat; }
 #addFooterLinks a.facebook {background: #e7e7e7 url(../images/api-sprites-tall.png) 0 -67px no-repeat; }
 #addFooterLinks a.twitter {background: #e7e7e7  url(../images/api-sprites-tall.png) 0 -94px no-repeat; }
-#addFooterLinks a:hover.twitter, #addFooterLinks a:focus.twitter,
-#addFooterLinks a:hover.rss, #addFooterLinks a:focus.rss,
-#addFooterLinks a:hover.facebook, #addFooterLinks a:focus.facebook {background: url(../images/api-sprites-
+#FooterSponsorLogos img {margin-right: 20px;}
