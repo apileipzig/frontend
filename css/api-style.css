@@ -188,9 +188,9 @@ div.last { margin-right: 0; }
 .span-2  { width: 128px;}
 .span-3  { width: 208px;}
 .span-4  { width: 288px;}
-.span-5  { width: 368px;}
+.span-5  { width: 530px;}
 .span-6  { width: 448px;}
-.span-7  { width: 528px;}
+.span-7  { width: 480px;margin-right:0px;}
 .span-8  { width: 608px;}
 .span-9  { width: 688px;}
 .span-10 { width: 768px;}
@@ -727,7 +727,7 @@ ul.subnav li.current ul {display: block;}
 
 /* footer
 -------------------------------------------------------------- */
-#FooterWikiNav {margin: 24px 0 48px; height: 144px;}
+#FooterWikiNav {width: 1100px; margin: 24px 0 48px; height: 144px;}
 #FooterWikiNav h1 {padding:6px 0; font-weight: bold; color: #292929;}
 #FooterWikiNav a {color: #292929; text-decoration: none;}
 #FooterWikiNav a:hover, #FooterWikiNav a:focus{color: #0066CC;}
@@ -738,4 +738,4 @@ border-radius: 5px; text-indent: 48px; line-height: 27px;}
 #addFooterLinks a.rss {background: #e7e7e7  url(../images/api-sprites-tall.png) 0 -40px no-repeat; }
 #addFooterLinks a.facebook {background: #e7e7e7 url(../images/api-sprites-tall.png) 0 -67px no-repeat; }
 #addFooterLinks a.twitter {background: #e7e7e7  url(../images/api-sprites-tall.png) 0 -94px no-repeat; }
-#FooterSponsorLogos img {margin-right: 20px;}
+#FooterSponsorLogos img {margin-right: 0px;}
